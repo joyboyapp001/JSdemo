@@ -1,22 +1,18 @@
-//更改本文
-//element.innerText = element.innerText;
-//更改HTML
-//element.innerHTML = `<span style="color:blue">${element.innerText}</span>`;
-
 const dateEls = document.querySelectorAll(".date");
 console.log(dateEls);
 dateEls.forEach(x => x.innerText = getToday());
 dateEls[0].setAttribute("style", "color:black;fontsize=16");
 showTime();
-
-
+click = false;
 function showTime() {
     dateEls[0].innerText = getTime();
     setTimeout(() => {
         showTime();
+        if (!click) {
+            lottoClick();
+        }
     }, 1000);
 }
-
 
 //取得今天日期
 function getToday() {
@@ -51,7 +47,7 @@ function getTime(fullTime = true) {
 
 function lottoClick() {
     let lottos = [];
-    const lottoEl = document.querySelector(".lotto-number");
+    click = true;
     lottoEl.innerHTML = "";
     for (let i = 0; i < 5; i++) {
         lotto.push(getLotto(start, end));
