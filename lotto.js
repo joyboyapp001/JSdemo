@@ -1,8 +1,7 @@
-const element = document.querySelector("h1");
-console.log(element);
-
 //更改本文
-element.innerHTML = `<span style="color:blue">${element.innerText}</span>`;
+//element.innerText = element.innerText;
+//更改HTML
+//element.innerHTML = `<span style="color:blue">${element.innerText}</span>`;
 
 const dateEl = document.querySelector('span.date');
 dateEl.innerText = "2023/4/6";
