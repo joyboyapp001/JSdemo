@@ -5,7 +5,7 @@ let lottos = [];
 const getRandNumber = (start, end) => Math.floor(Math.random() * (end - start + 1)) + start;
 
 
-document.write("<h2>大樂透號碼</h2>");
+//document.write("<h2>大樂透號碼</h2>");
 for (let i = 0; i < 5; i++) {
     lotto.push(getLotto(start, end));
     lottos.push(lotto);
@@ -20,7 +20,7 @@ c = a > b ? a + b : a - b;
 console.log(c);
 
 for (let i = 0; i < lottos.length; i++) {
-    document.write(`<li style =${i % 2 == 0 ? "color:red" : "color:blue"}>${lotto[i].join(",")}</li>`);
+    //document.write(`<li style =${i % 2 == 0 ? "color:red" : "color:blue"}>${lotto[i].join(",")}</li>`);
 }
 
 
@@ -79,10 +79,10 @@ let users = [
 //console.log(user[0]);
 
 //使用for 迴圈取值,姓名跟email輸出document
-for (let i = 0; i < users.length; i++) {
-    document.write(`${user[i].name}-${user[i], email}<br>`);
-}
+// for (let i = 0; i < users.length; i++) {
+//     document.write(`${user[i].name}-${user[i], email}<br>`);
+// }
 
-user.forEach(user => document.write(`${user.name}-${user, email}<br>`));
+// user.forEach(user => document.write(`${user.name}-${user, email}<br>`));
 
 //使用forEach取值,姓名跟email輸出document
